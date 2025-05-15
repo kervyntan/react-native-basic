@@ -3,7 +3,10 @@ import { Image, StyleSheet, Text, View } from "react-native";
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Image style={styles.img} source={require("../assets/splash-icon.png")} />
+      <Image
+        style={[styles.img, { marginVertical: 10 }]}
+        source={require("../assets/splash-icon.png")}
+      />
       <View>
         <Text style={styles.title}> Home </Text>
         <Text> Supermarket App </Text>
@@ -36,8 +39,7 @@ const styles = StyleSheet.create({
     boxShadow: "4px 4px rgba(0,0,0,0.1)",
   },
   img: {
-    marginVertical: 10,
     width: 100,
-    height: 100
+    height: 100,
   },
 });
