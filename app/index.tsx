@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { Image, StyleSheet, Text, View } from "react-native";
 
 const Home = () => {
@@ -16,6 +17,8 @@ const Home = () => {
         <Text style={styles.title}> This is a test card. </Text>
         <Text> Lalalala </Text>
       </View>
+
+      <Link href="/about" style={styles.link}> About </Link>
     </View>
   );
 };
@@ -41,5 +44,9 @@ const styles = StyleSheet.create({
   img: {
     width: 100,
     height: 100,
+  },
+  link: {
+    marginVertical: 10,
+    borderBottomWidth: 1,
   },
 });
