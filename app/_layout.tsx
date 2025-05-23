@@ -1,10 +1,13 @@
+import { Slot, Stack } from "expo-router";
 import { View, Text, StyleSheet } from "react-native";
 
-const RootLayout = ({ children }) => {
+// Renders in preference of index.tsx
+const RootLayout = () => {
   return (
-    <View style={styles.container}>
-      <Text> Footer </Text>
-    </View>
+    <Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="about" options={{ headerShown: false }} />
+    </Stack>
   );
 };
 
@@ -13,5 +16,6 @@ export default RootLayout;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 50,
   },
 });
